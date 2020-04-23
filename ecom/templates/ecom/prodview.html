@@ -1,0 +1,40 @@
+{% extends "ecom/basic.html" %}
+
+{% block title %}{{produ.product_name}} {% endblock %}
+
+{% block body %}
+<div class="container my-4">
+<div class="row">
+    <div class="col-md-4">
+
+    <div class=row>
+       <img src="/media/{{produ.image}}" width=290px
+       height="400px">
+    </div>
+    <div class=row>
+        <button class="btn btn-primary mx-3 my-4" >
+            BUY NOW
+
+        </button>
+        <button class="btn btn-primary my-4" >
+          ADD TO CART
+
+        </button>
+    </div>
+
+</div>
+<div class="col-md-8">
+   <h3> {{produ.product_name}}
+
+   </h3>
+   <p>
+       <strong>Rs.{{produ.price}}</strong><br>
+       {{produ.desc}}
+   </p>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
